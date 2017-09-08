@@ -1,0 +1,34 @@
+%%driver_title%en%%
+Platron
+%%driver_title%ru%%
+Platron
+
+%%merchant_id%en%%
+Merchant Id
+%%merchant_id%ru%%
+Id магазина
+
+%%secret_key%en%%
+Merchant secret key
+%%secret_key%ru%%
+Секретный ключ магазина
+
+%%testing_mode%en%%
+Demo mode
+%%testing_mode%ru%%
+Демо режим
+
+%%lifetime%en%%
+Transaction lifetime (min)
+%%lifetime%ru%%
+Время жизни счета в минутах
+
+%%button_caption%en%%
+Pay using Platron
+%%button_caption%ru%%
+Оплатить через Platron
+
+%%payment_system_name%en%%
+Payment system name (choose PS on merchant side)
+%%payment_system_name%ru%%
+Идентификатор ПС (в случае выбора на стороне ПС)
