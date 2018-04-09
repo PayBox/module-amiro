@@ -31,7 +31,7 @@
 "-->
 
 <!--#set var="pay_form" value="
-    <form name="paymentform" action="https://paybox.kz/payment.php" method="POST">
+    <form name="paymentform" action="https://api.paybox.money/payment.php" method="POST">
 		<input type="hidden" name="pg_merchant_id" value="##pg_merchant_id##" />
 		<input type="hidden" name="pg_order_id" value="##pg_order_id##" />
 		<input type="hidden" name="pg_currency" value="##pg_currency##" />
