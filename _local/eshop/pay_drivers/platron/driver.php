@@ -116,15 +116,17 @@ class Platron_PaymentSystemDriver extends AMI_PaymentSystemDriver{
 			$arrFields['pg_user_email'] = $aData['email'];
 			$arrFields['pg_user_contact_email'] = $aData['email'];
 		}
-		
+
 		
 		if(!empty($aData['payment_system_name']) && !$arrFields['pg_testing_mode'])
 			$arrFields['pg_payment_system'] = $aData['payment_system_name'];
 		
-		$arrFields['pg_sig'] = PG_Signature::make('payment.php', $arrFields, $aData['secret_key']);
-//		var_dump($aData);
-//		var_dump($arrFields);
-
+		ksort($arrFields);
+		array_unshift($arrFields, 'payment.php');
+		array_push($arrFields, $aData['secret_key']);
+		$arrFields['pg_sig'] = md5(implode(';', $arrFields));
+		unset($arrFields[0], $arrFields[1]);
+		
 		// Check parameters and set your fields here
         return parent::getPayButtonParams($arrFields + $aData, $aRes);
     }
@@ -227,7 +229,7 @@ class Platron_PaymentSystemDriver extends AMI_PaymentSystemDriver{
 				else
 					$bResult = 0;
 			}
-			
+
 			$objResponse = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><response/>');
 			$objResponse->addChild('pg_salt', $arrRequest['pg_salt']);
 			$objResponse->addChild('pg_status', $strResponseStatus);
