@@ -1,4 +1,4 @@
-%%include_language "_local/eshop/pay_drivers/platron/driver.lng"%%
+%%include_language "_local/eshop/pay_drivers/paybox/driver.lng"%%
 
 <!--#set var="settings_form" value="
     <tr>
@@ -24,7 +24,7 @@
 "-->
 
 <!--#set var="checkout_form" value="
-    <form name="paymentformplatron" action="##process_url##" method="POST">
+    <form name="paymentformpaybox" action="##process_url##" method="POST">
         ##hiddens##
         <input type="submit" name="sbmt" class="btn" value="      %%button_caption%%      " ##disabled##>
     </form>
@@ -46,7 +46,7 @@
 		<input type="hidden" name="pg_request_method" value="##pg_request_method##" />
 		<input type="hidden" name="pg_success_url" value="##pg_success_url##" />
 		<input type="hidden" name="pg_failure_url" value="##pg_failure_url##" />
-		
+
 		##if(!empty(pg_user_phone))##
 		<input type="hidden" name="pg_user_phone" value="##pg_user_phone##" />
 		##endif##

@@ -1,7 +1,7 @@
 %%driver_title%en%%
-Platron
+Paybox
 %%driver_title%ru%%
-Platron
+Paybox
 
 %%merchant_id%en%%
 Merchant Id
@@ -24,9 +24,9 @@ Transaction lifetime (min)
 Время жизни счета в минутах
 
 %%button_caption%en%%
-Pay using Platron
+Pay using Paybox
 %%button_caption%ru%%
-Оплатить через Platron
+Оплатить через Paybox
 
 %%payment_system_name%en%%
 Payment system name (choose PS on merchant side)
